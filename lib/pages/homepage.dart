@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rex/pages/home.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -15,9 +16,11 @@ class _HomepageState extends State<Homepage> {
   void onSelected(int index){
     setState(() {
       selected = index;
-    });
-   
+    });  
   }
+  final List<Widget> pages = [
+    Home(),
+  ]
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Homepage'),),
